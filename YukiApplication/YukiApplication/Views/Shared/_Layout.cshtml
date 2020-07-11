@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .navbar-brand{
+            margin:0;
+            padding:0;
+        }
+        .logo {
+            height: 70px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background:white; border-color:white; height:70px;" >  
+        <div class="container" >
+            <div class="navbar-header" ;">
+                <a 
+                   class="navbar-brand" href="/" style="margin-left: 0px;"><img src="https://i.pinimg.com/236x/88/b1/d8/88b1d83088d00a5e76f0ad10f868c715--hand-lettering.jpg" width="100"
+                   class="img-responsive logo" 
+                   style="
+                    padding-left:0px;
+                    padding-right:0px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;">
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div> 
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="padding-left: 50px;">
+                    <li style="">
+                        <a href="/Home/Woman" style="width: 70px;height: 80px;">
+                            <p>
+                                <center> Woman </center>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Home/Men" style="width: 70px;height: 80px;">
+                            <p>
+                                <center> Men </center>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Home/About" style="width: 70px;height: 80px;">
+                            <p>
+                                <center> About </center>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Home/Contact" style="width: 70px;height: 80px;">
+                            <p>
+                                <center> Contact </center>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
