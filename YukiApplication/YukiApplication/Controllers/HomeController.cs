@@ -27,14 +27,14 @@ namespace YukiApplication.Controllers
             return View();
         }
 
-        public ActionResult Woman()
+        public ActionResult Female()
         {
             ViewBag.Message = "Your woman page.";
 
             return View();
         }
 
-        public ActionResult Men()
+        public ActionResult Male()
         {
             ViewBag.Message = "Your men page.";
 

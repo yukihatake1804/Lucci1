@@ -416,7 +416,11 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\Female.cshtml" />
+    <Content Include="Views\Home\Male.cshtml" />
     <None Include="Views\Shared\winter.cshtml" />
+    <None Include="Views\Shared\about.cshtml" />
+    <None Include="Views\Shared\category.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -451,8 +455,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\Woman.cshtml" />
-    <Content Include="Views\Home\Men.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
