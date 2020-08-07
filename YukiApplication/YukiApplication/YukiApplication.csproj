@@ -201,7 +201,13 @@
     <Content Include="Content\css\style.css" />
     <Content Include="Content\css\swiper.min.css" />
     <Content Include="Content\css\themify-icons.css" />
+    <Content Include="Content\img\category\category1.png" />
+    <Content Include="Content\img\favicon.png" />
     <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\product_details\detail_1.jpg" />
+    <Content Include="Content\img\product_details\detail_2.jpg" />
+    <Content Include="Content\img\product_details\detail_3.jpg" />
+    <Content Include="Content\img\product_details\detail_4.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\themify.svg" />
@@ -261,7 +267,6 @@
     <Content Include="Content\img\blog\single_blog_4.png" />
     <Content Include="Content\img\blog\single_blog_5.png" />
     <Content Include="Content\img\blog\slide_thumb_1.png" />
-    <Content Include="Content\img\category\category_1.png" />
     <Content Include="Content\img\category\category_10.png" />
     <Content Include="Content\img\category\category_11.png" />
     <Content Include="Content\img\category\category_12.png" />
@@ -303,7 +308,6 @@
     <Content Include="Content\img\elements\success-radio.png" />
     <Content Include="Content\img\elements\user1.png" />
     <Content Include="Content\img\elements\user2.png" />
-    <Content Include="Content\img\favicon.png" />
     <Content Include="Content\img\feature_1.png" />
     <Content Include="Content\img\feature_2.png" />
     <Content Include="Content\img\feature_3.png" />
@@ -418,9 +422,11 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Views\Home\Female.cshtml" />
     <Content Include="Views\Home\Male.cshtml" />
-    <None Include="Views\Shared\winter.cshtml" />
+    <Content Include="Views\Home\SingleProduct.cshtml" />
+    <None Include="Views\Shared\Winter.cshtml" />
     <None Include="Views\Shared\about.cshtml" />
-    <None Include="Views\Shared\category.cshtml" />
+    <None Include="Views\Shared\CategoryFemale.cshtml" />
+    <None Include="Views\Shared\Single-product.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
