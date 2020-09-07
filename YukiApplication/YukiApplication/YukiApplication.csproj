@@ -423,6 +423,8 @@
     <Content Include="Views\Home\Female.cshtml" />
     <Content Include="Views\Home\Male.cshtml" />
     <Content Include="Views\Home\SingleProduct.cshtml" />
+    <Content Include="Views\Shared\Category.cshtml" />
+    <Content Include="Views\Home\Category.cshtml" />
     <None Include="Views\Shared\Winter.cshtml" />
     <None Include="Views\Shared\about.cshtml" />
     <None Include="Views\Shared\CategoryFemale.cshtml" />

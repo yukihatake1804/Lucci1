@@ -47,5 +47,12 @@ namespace YukiApplication.Controllers
 
             return View();
         }
+
+        public ActionResult Category()
+        {
+            ViewBag.Message = "Your men page.";
+
+            return View();
+        }
     }
 }
