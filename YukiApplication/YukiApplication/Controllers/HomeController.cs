@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using YukiApplication.Models;
 
 namespace YukiApplication.Controllers
 {
     public class HomeController : Controller
     {
+        CS4PET1Entities db = new CS4PET1Entities();
         public ActionResult Index()
         {
             return View();
@@ -29,9 +31,8 @@ namespace YukiApplication.Controllers
 
         public ActionResult Female()
         {
-            ViewBag.Message = "Your woman page.";
-
-            return View();
+            var model = db.SanPham.ToList();
+            return View(model);
         }
 
         public ActionResult Male()
@@ -53,6 +54,12 @@ namespace YukiApplication.Controllers
             ViewBag.Message = "Your men page.";
 
             return View();
+        }
+
+        public ActionResult List()
+        {
+            var model = db.SanPham.ToList();
+            return View(model);
         }
     }
 }
