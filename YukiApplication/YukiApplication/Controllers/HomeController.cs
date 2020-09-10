@@ -61,5 +61,12 @@ namespace YukiApplication.Controllers
             var model = db.SanPham.ToList();
             return View(model);
         }
+
+        public ActionResult GioHang()
+        {
+            ViewBag.Message = "Your men page.";
+
+            return View();
+        }
     }
 }

@@ -185,6 +185,7 @@
     <Compile Include="Models\GioHang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GioHangController.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\KichCo.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -477,6 +478,9 @@
     <Content Include="Views\Home\SingleProduct.cshtml" />
     <Content Include="Views\Shared\Category.cshtml" />
     <Content Include="Views\Home\Category.cshtml" />
+    <Content Include="Views\GioHang\Index.cshtml" />
+    <Content Include="Views\Home\GioHang.cshtml" />
+    <Content Include="Views\Shared\GioHang.cshtml" />
     <None Include="Views\Shared\Winter.cshtml" />
     <None Include="Views\Shared\about.cshtml" />
     <None Include="Views\Shared\CategoryFemale.cshtml" />
