@@ -82,16 +82,16 @@
     </tr>
     @foreach (var monhang in Model)
     {
-        <tr>
-            <td>@monhang.SanPham.TenSanPham</td>
-            <td>@monhang.SanPham.KichCo</td>
-            <td>@monhang.SanPham.DonGia</td>
-            <td>@monhang.SanPham.SoLuong</td>
-            <td>@(monhang.SanPham.DonGia * monhang.SanPham.SoLuong)</td>
-            <td>
-                <a>Xóa</a>
-            </td>
-        </tr>
+<tr>
+    <td>@monhang.SanPham.TenSanPham</td>
+    <td>@monhang.SanPham.KichCo</td>
+    <td>@monhang.SanPham.DonGia</td>
+    <td>1</td>
+    <td>@(monhang.SanPham.DonGia * 1)</td>
+    <td>
+        <a>Xóa</a>
+    </td>
+</tr>
     }
 </table>
 
@@ -106,7 +106,7 @@
     </tr>
     <tr>
         <td>Tổng tiền:</td>
-        <td>@Model.Sum(mh => mh.SanPham.DonGia + mh.SanPham.SoLuong) </td>
+        <td>@Model.Sum(mh => mh.SanPham.DonGia) </td>
     </tr>
 
 </table>

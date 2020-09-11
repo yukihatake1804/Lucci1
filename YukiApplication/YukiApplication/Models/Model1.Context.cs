@@ -30,6 +30,5 @@ namespace YukiApplication.Models
         public virtual DbSet<GioHang> GioHang { get; set; }
         public virtual DbSet<KichCo> KichCo { get; set; }
         public virtual DbSet<SanPham> SanPham { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

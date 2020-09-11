@@ -113,7 +113,7 @@ namespace YukiApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                model.NgayGio = DateTime.Now;
+                model.NgayGio = DateTime.Now;   
                 model.TrangThai = " chưa xác nhận ";
                 db.DonHang.Add(model);
                 db.SaveChanges();

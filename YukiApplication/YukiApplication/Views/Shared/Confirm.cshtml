@@ -14,8 +14,8 @@
             background-size: 1px;
         }
 
-        #form {
-            margin-left: 600px;
+        #form-group {
+            margin-left: 500px;
         }
 
         #xacnhan {
@@ -29,27 +29,26 @@
     </style>
 </head>
 <h2>THÔNG TIN GIAO HÀNG</h2>
-<form id="form">
+
+@using (Html.BeginForm())
+{
     <div class="form-group">
-        <label for="exampleInputFullname">Họ & tên</label>
-        <input type="text" class="form-control" id="exampleInputFullname" placeholder="Fullname">
+        @Html.LabelFor(dh => dh.HoTen)
+        @Html.TextBoxFor(dh => dh.HoTen, new { @class = "form-control" })
     </div>
     <div class="form-group">
-        <label for="exampleInputPhoneNumber">Điện thoại</label>
-        <input type="text" class="form-control" id="exampleInputPhoneNumber" placeholder="Phonenumber">
+        @Html.LabelFor(dh => dh.DienThoai)
+        @Html.TextBoxFor(dh => dh.DienThoai, new {@class = "form-control" })
     </div>
     <div class="form-group">
-        <label for="exampleInputProvince">Tỉnh thành</label>
-        <input type="text" class="form-control" id="exampleInputProvince" placeholder="Province">
+        @Html.LabelFor(dh => dh.DiaChi)
+        @Html.TextAreaFor(dh => dh.DiaChi, new { @class = "form-control" })
     </div>
     <div class="form-group">
-        <label for="exampleInputDistrict">Quận / huyện</label>
-        <input type="text" class="form-control" id="exampleInputDistrict" placeholder="District">
+        <h6>Ngày giờ:@DateTime.Now</h6>
     </div>
-    <div class="form-group">
-        <label for="exampleInputAddress">Địa chỉ</label>
-        <input type="text" class="form-control" id="exampleInputAddress" placeholder="Address">
-    </div>
-</form>
-<a id="xacnhan" type="submit" class="btn btn-success" style="width:300px;">Xác nhận đặt hàng</a>
+
+    <a href="/Home/BillCreate" class="btn btn-success">Lưu thông tin</a>
+    <a>| Quay lại</a>
+}
 @RenderBody();
