@@ -480,6 +480,10 @@
     <Content Include="Views\Home\Category.cshtml" />
     <Content Include="Views\Home\Cart.cshtml" />
     <Content Include="Views\Shared\Cart.cshtml" />
+    <Content Include="Views\Home\BillCreate.cshtml" />
+    <Content Include="Views\Shared\BillCreate.cshtml" />
+    <Content Include="Views\Home\Confirm.cshtml" />
+    <Content Include="Views\Shared\Confirm.cshtml" />
     <None Include="Views\Shared\Winter.cshtml" />
     <None Include="Views\Shared\about.cshtml" />
     <None Include="Views\Shared\CategoryFemale.cshtml" />

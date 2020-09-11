@@ -102,5 +102,36 @@ namespace YukiApplication.Controllers
                 return View(model);
             }
         }
+
+        public ActionResult Confirm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult BillCreate(DonHang model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.NgayGio = DateTime.Now;
+                model.TrangThai = " chưa xác nhận ";
+                db.DonHang.Add(model);
+                db.SaveChanges();
+
+                var GioHang = Session["GioHang"] as List<GioHang>;
+                foreach (var monHang in GioHang)
+                {
+                    var gioHang = new GioHang();
+                    gioHang.id = model.id;
+                    gioHang.DonGia = monHang.SanPham.DonGia;
+                    gioHang.SoLuong = 1;
+                    gioHang.idSanPham = monHang.SanPham.id;
+                    db.GioHang.Add(gioHang);
+                }
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else return View(model);
+        }
     }
 }
