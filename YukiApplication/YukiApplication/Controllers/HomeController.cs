@@ -102,7 +102,7 @@ namespace YukiApplication.Controllers
             }
         }
 
-        public ActionResult Confirm()
+            public ActionResult Confirm()
         {
             return View();
         }
@@ -113,7 +113,8 @@ namespace YukiApplication.Controllers
             if (ModelState.IsValid)
             {
                 model.NgayGio = DateTime.Now;   
-                model.TrangThai = " chưa xác nhận ";
+                model.TrangThai = "Chưa xác nhận";
+                
                 db.DonHang.Add(model);
                 db.SaveChanges();
 

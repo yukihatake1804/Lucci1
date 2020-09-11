@@ -45,7 +45,8 @@
         @Html.TextAreaFor(dh => dh.DiaChi, new { @class = "form-control" })
     </div>
     <div class="form-group">
-        <h6>Ngày giờ:@DateTime.Now</h6>
+        < @Html.LabelFor(dh => dh.NgayGio)
+        @Html.TextAreaFor(dh => dh.NgayGio, new { @class = "form-control" })
     </div>
 
     <a href="/Home/BillCreate" class="btn btn-success">Lưu thông tin</a>
