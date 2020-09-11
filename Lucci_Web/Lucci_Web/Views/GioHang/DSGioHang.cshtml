@@ -1,0 +1,41 @@
+﻿@model List<Lucci_Web.Models.GioHang>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Thông tin giỏ hàng của bạn</h2>
+
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>Tên sản phẩm</th>
+        <th>Giá tiền</th>
+        <th>Số lượng</th>
+        <th>Thành tiền</th>
+       <th>Chức năng</th>
+    </tr>
+    @foreach (var monHang in Model)
+    {
+    <tr>
+        <td>@monHang.SanPham.TenSanPham</td>
+        <td>@monHang.SanPham.DonGia</td>
+        <td>@monHang.SoLuong</td>
+        <td>@(monHang.SanPham.DonGia * monHang.SoLuong)</td>
+        <td><a href="~/GioHang/Delete?id=@monHang.id">Xóa</a>
+        <a href="~/GioHang/Edit?id=@monHang.id">| Chỉnh sửa</a></td>
+        
+     </tr>
+    }
+</table>
+
+<div>
+    Tổng tiền: @Model.Sum(mh => mh.SanPham.DonGia * mh.SoLuong)
+</div>
+<div>
+    Tổng số lượng: Số lượng : @Model.Sum(mh => mh.SoLuong)
+</div>
+@if (Model.Count > 0)
+{
+    <div>
+        <a href="~/DanhSachDonHang/Create" class="btn btn-success">Đặt hàng</a>
+    </div>
+}

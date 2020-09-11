@@ -1,0 +1,39 @@
+﻿@model Lucci_Web.Models.GioHang
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h3>Bạn có muốn xóa sản phẩm?</h3>
+<div>
+    <h4>Sản Phẩm</h4>
+    <hr />
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(sp => sp.SanPham.TenSanPham)
+        </dt>
+        <dd>
+            @Html.DisplayFor(sp => sp.SanPham.TenSanPham)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(sp => sp.DonGia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(sp => sp.DonGia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(sp => sp.SoLuong)
+        </dt>
+        <dd>
+            @Html.DisplayFor(sp => sp.SoLuong)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a href="~/GioHang/DSGioHang">| Quay lại</a>
+        </div>
+    }
+</div>
+

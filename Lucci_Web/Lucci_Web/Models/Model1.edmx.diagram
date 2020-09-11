@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e1a1d678d31a48f084b5732005d4fcf1" Name="Diagram1">
+        <EntityTypeShape EntityType="CS4PET1Model.ChiTietSanPham" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS4PET1Model.DonHang" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS4PET1Model.GioHang" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS4PET1Model.KichCo" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS4PET1Model.SanPham" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="CS4PET1Model.FK__ChiTietSa__idSan__39AD8A7F" ManuallyRouted="false" />
+        <AssociationConnector Association="CS4PET1Model.FK__DonHang__idGioHa__414EAC47" ManuallyRouted="false" />
+        <AssociationConnector Association="CS4PET1Model.FK__GioHang__idSanPh__3C89F72A" ManuallyRouted="false" />
+        <AssociationConnector Association="CS4PET1Model.FK__SanPham__idKichC__34E8D562" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
