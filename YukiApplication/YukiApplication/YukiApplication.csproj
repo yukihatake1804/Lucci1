@@ -478,9 +478,8 @@
     <Content Include="Views\Home\SingleProduct.cshtml" />
     <Content Include="Views\Shared\Category.cshtml" />
     <Content Include="Views\Home\Category.cshtml" />
-    <Content Include="Views\GioHang\Index.cshtml" />
-    <Content Include="Views\Home\GioHang.cshtml" />
-    <Content Include="Views\Shared\GioHang.cshtml" />
+    <Content Include="Views\Home\Cart.cshtml" />
+    <Content Include="Views\Shared\Cart.cshtml" />
     <None Include="Views\Shared\Winter.cshtml" />
     <None Include="Views\Shared\about.cshtml" />
     <None Include="Views\Shared\CategoryFemale.cshtml" />

@@ -1,0 +1,125 @@
+﻿
+@{
+    Layout = null;
+}
+
+@model List<YukiApplication.Models.GioHang>
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(180deg,rgba(135,206,250,0.5),rgba(245,245,245,0.5)), url(https://patternanddesign.com/wp-content/uploads/2019/01/ogee.jpg);
+            background-size: 1px;
+        }
+
+        h2 {
+            margin-left: 100px;
+        }
+
+        .Logo {
+            width: 150px;
+            height: 100px;
+            margin-left: 70px;
+        }
+
+        .Delivery {
+            width: 400px;
+            height: 200px;
+            margin-top: -200px;
+            margin-left: 50px;
+        }
+
+        table {
+            width: 90%;
+            font-size: 20px;
+        }
+
+        th, td {
+            text-align: center;
+        }
+
+        #tongtien {
+            font-size: 25px;
+            width: 30%;
+            margin-left: 970px;
+            margin-top: 350px;
+        }
+
+        #dathang {
+            margin-left: 1050px;
+            margin-top: 20px;
+        }
+
+        #tieptuc {
+            margin-top: -35px;
+            margin-left: 100px;
+        }
+
+        #Index {
+            font-size: 30px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+@RenderBody();
+<a> <img class="Logo" src="~/Content/Logo.jpg" /></a>
+<a href="" id="Index">Trang chủ</a>
+<h2>Giỏ Hàng</h2>
+
+<table>
+    <tr>
+        <th>Tên sản phẩm</th>
+        <th>Kích cỡ</th>
+        <th>Giá tiền</th>
+        <th>Số lượng</th>
+        <th>Thành tiền</th>
+        <th> </th>
+    </tr>
+    @foreach (var monhang in Model)
+    {
+        <tr>
+            <td>@monhang.SanPham.TenSanPham</td>
+            <td>@monhang.SanPham.KichCo</td>
+            <td>@monhang.SanPham.DonGia</td>
+            <td>@monhang.SanPham.SoLuong</td>
+            <td>@(monhang.SanPham.DonGia * monhang.SanPham.SoLuong)</td>
+            <td>
+                <a>Xóa</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<table id="tongtien">
+    <tr>
+        <td>Số lượng:</td>
+        <td>@Model.Count</td>
+    </tr>
+    <tr>
+        <td>Ngày tháng:</td>
+        <td>@DateTime.Now</td>
+    </tr>
+    <tr>
+        <td>Tổng tiền:</td>
+        <td>@Model.Sum(mh => mh.SanPham.DonGia + mh.SanPham.SoLuong) </td>
+    </tr>
+
+</table>
+
+@if (Model.Count > 0)
+{
+    <div id="dathang">
+        <a href="~/DonHang/Xacnhan" class="btn btn-success" style="width: 300px;">Đặt hàng</a>
+    </div>
+}
+
+
+<a> <img class="Delivery" src="~/Content/Delivery.gif" /></a>
+<div id="tieptuc">
+    <a href="" class="btn btn-success" style="width:300px;">Tiếp tục mua hàng</a>
+</div>

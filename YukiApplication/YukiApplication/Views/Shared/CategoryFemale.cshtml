@@ -1,4 +1,5 @@
-﻿<head>
+﻿<html>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -92,17 +93,7 @@
                             </ul>
                         </div>
                         <div class="hearer_icon d-flex">
-                            <div class="dropdown cart">
-                                <a class="dropdown-toggle" href="#" id="navbarDropdown3" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="ti-bag"></i>
-                                </a>
-                                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <div class="single_product">
-
-                                    </div>
-                                </div> -->
-                            </div>
+                            <a href="/Home/Cart" class="ti-bag"></a>
                             <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
                         </div>
                     </nav>
@@ -196,7 +187,7 @@
                             </div>
                             <div class="widgets_inner">
                                 <ul class="list">
-                                    <p>Brands</p>
+                                    <li>Brands</li>
                                     <li>
                                         <input type="radio" aria-label="Radio button for following text input">
                                         <a href="#"></a>
@@ -307,7 +298,7 @@
                                             <h3>@sanPham.TenSanPham</h3>
                                             <p>
                                                 <a href="#" class="btn btn-primary" role="button">@sanPham.DonGia.ToString("N0")<span>đ</span></a>
-                                                <a href="~/GioHang/Create?productId=@sanPham.id" class="btn btn-default" role="button">Mua</a>
+                                                <a href="Create?productId=@sanPham.id" class="btn btn-default" role="button">Mua</a>
                                             </p>
                                         </div>
                                     </div>
@@ -367,7 +358,7 @@
     <!-- free shipping end -->
     <!-- subscribe_area part start-->
     <section class="instagram_photo">
-        <div class="container-fluid>
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="instagram_photo_iner">

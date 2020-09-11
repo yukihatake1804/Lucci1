@@ -51,9 +51,8 @@ namespace YukiApplication.Controllers
 
         public ActionResult Category()
         {
-            ViewBag.Message = "Your men page.";
-
-            return View();
+            var model = db.SanPham.ToList();
+            return View(model);
         }
 
         public ActionResult List()
@@ -62,11 +61,46 @@ namespace YukiApplication.Controllers
             return View(model);
         }
 
-        public ActionResult GioHang()
+        //GioHang
+        public ActionResult Cart()
         {
-            ViewBag.Message = "Your men page.";
+            var model = new List<GioHang>();
+            if (Session["GioHang"] != null)
+            {
+                model = Session["GioHang"] as List<GioHang>;
+            }
+            return View(model);
+        }
+        public ActionResult Create(int productId)
+        {
+            // Get GioHang
+            var GioHang = new List<GioHang>();
+            if (Session["GioHang"] != null)
+            {
+                GioHang = Session["GioHang"] as List<GioHang>;
+            }
+            // Create new item
+            var model = new GioHang();
+            model.SanPham = db.SanPham.Find(productId);
+            // Add to GioHang
+            GioHang.Add(model);
+            Session["GioHang"] = GioHang;
+            return RedirectToAction("Female");
+        }
 
-            return View();
+        public ActionResult Delete(int id)
+        {
+            var model = db.GioHang.Find(id);
+            if (id != null)
+            {
+                db.GioHang.Remove(model);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(model);
+            }
         }
     }
 }
