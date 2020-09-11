@@ -53,9 +53,6 @@
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
                                         <a class="dropdown-item" href="/Home/Category">Shop Now!</a>
-                                        <a class="dropdown-item" href="Female"> Shop For Female</a>
-                                        <a class="dropdown-item" href="Male">Shop For Male</a>
-                                        <a class="dropdown-item" href="SingleProduct">Single Product</a>
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -139,23 +136,6 @@
                                 <div class="single_product_menu product_bar_item">
                                     <h2>Categories</h2>
                                 </div>
-                                <div class="product_top_bar_iner product_bar_item d-flex">
-                                    <div class="product_bar_single">
-                                        <select class="wide">
-                                            <option data-display="Default sorting">Default sorting</option>
-                                            <option value="1">Some option</option>
-                                            <option value="2">Another option</option>
-                                            <option value="3">Potato</option>
-                                        </select>
-                                    </div>
-                                    <div class="product_bar_single">
-                                        <select>
-                                            <option data-display="Show 12">Show 12</option>
-                                            <option value="1">Show 20</option>
-                                            <option value="2">Show 30</option>
-                                        </select>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -167,9 +147,11 @@
                             {
                                 <div class="col-sm-6 col-md-4">
                                     <div class="thumbnail">
-                                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzM1IiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMzNSAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTc0NmNiZTVlOGIgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxN3B0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNzQ2Y2JlNWU4YiI+PHJlY3Qgd2lkdGg9IjMzNSIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMjMuMzIwMzEyNSIgeT0iMTA3LjY0MDYyNSI+MzM1eDIwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" alt="...">
-                                        <div class="caption">
-                                            <h3>@sanPham.TenSanPham</h3>
+                                        <img src="~/Content/img/logo.png" width="300" height="250" alt="...">
+                                        <div class="caption" style="height:90px">
+                                            <p class="nav-item">
+                                                <a class="nav-link" href="/Home/SingleProduct" style="padding-left:0px;padding-bottom:0px">@sanPham.TenSanPham</a>
+                                            </p>
                                             <p>
                                                 <a href="#" class="btn btn-primary" role="button">@sanPham.DonGia.ToString("N0")<span>đ</span></a>
                                                 <a href="Create?productId=@sanPham.id" class="btn btn-default" role="button">Mua</a>
@@ -178,15 +160,6 @@
                                     </div>
                                 </div>
                             }
-                        </div>
-
-
-
-
-
-
-                        <div class="col-lg-12 text-center">
-                            <a href="#" class="btn_2">More Items</a>
                         </div>
                     </div>
                 </div>

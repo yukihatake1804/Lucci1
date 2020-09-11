@@ -44,9 +44,8 @@ namespace YukiApplication.Controllers
 
         public ActionResult SingleProduct()
         {
-            ViewBag.Message = "Your men page.";
-
-            return View();
+            var model = db.SanPham.ToList();
+            return View(model);
         }
 
         public ActionResult Category()
@@ -85,7 +84,7 @@ namespace YukiApplication.Controllers
             // Add to GioHang
             GioHang.Add(model);
             Session["GioHang"] = GioHang;
-            return RedirectToAction("Female");
+            return RedirectToAction("Category");
         }
 
         public ActionResult Delete(int id)
@@ -133,5 +132,7 @@ namespace YukiApplication.Controllers
             }
             else return View(model);
         }
+
+
     }
 }

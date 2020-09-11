@@ -67,8 +67,8 @@
     </style>
 </head>
 @RenderBody();
-<a> <img class="Logo" src="~/Content/Logo.jpg" /></a>
-<a href="" id="Index">Trang chủ</a>
+<a> <img class="Logo" src="~/Content/img/logo.png" /></a>
+<a href="/Home" id="Index">Trang chủ</a>
 <h2>Giỏ Hàng</h2>
 
 <table>
@@ -96,13 +96,14 @@
 </table>
 
 <table id="tongtien">
-    <tr>
-        <td>Số lượng:</td>
-        <td>@Model.Count</td>
-    </tr>
+
     <tr>
         <td>Ngày tháng:</td>
         <td>@DateTime.Now</td>
+    </tr>
+    <tr>
+        <td>Số lượng:</td>
+        <td>@Model.Count</td>
     </tr>
     <tr>
         <td>Tổng tiền:</td>
@@ -116,9 +117,6 @@
         <a href="/Home/Confirm" class="btn btn-success" style="width: 300px;">Đặt hàng</a>
     </div>
 
-
-
-<a> <img class="Delivery" src="~/Content/Delivery.gif" /></a>
 <div id="tieptuc">
     <a href="" class="btn btn-success" style="width:300px;">Tiếp tục mua hàng</a>
 </div>
